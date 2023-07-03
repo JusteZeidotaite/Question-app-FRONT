@@ -11,10 +11,16 @@ const Navbar = () => {
 
       <ul>
         <li>
-          <a href="/">Main</a>
+          <a className={styles.mainTitle} href="/">Main</a>
         </li>
         <li>
-          <a href="/newBoardgame">Create event</a>
+          <a className={styles.mainAsk} href="/question">Ask a Question</a>
+        </li>
+        <li>
+          <a className={styles.signUp} href="/register">Sign Up</a>
+        </li>
+        <li>
+          <a href="/login">Login</a>
         </li>
       </ul>
     </div>

@@ -1,0 +1,9 @@
+.cardsWrapper{
+    gap: 30px;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5%;
+   
+}
