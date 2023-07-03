@@ -1,13 +1,15 @@
 
+
+
 .card{
     background-color: rgb(237, 246, 246);
-    width: 95%;
+    max-width: 80%;
     height: 100px;
     padding: 10px;
     border-radius: 6px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     transition: .3s;
 }
 
@@ -24,6 +26,17 @@
     margin:0;
 }
 
+.link button {
+     width: 70px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: rgb(228, 214, 25);
+    color: rgb(53, 42, 42);
+    font-size: smaller;
+    border-style: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 
 
 .questionText{
@@ -37,4 +50,10 @@
     margin: 0;
     padding: 5px;
 
+}
+
+.creationDate {
+    margin-bottom: 20px;
+    font-size: smaller;
+    color: rgb(0, 46, 0);
 }

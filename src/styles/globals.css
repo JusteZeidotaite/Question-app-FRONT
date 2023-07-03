@@ -1,5 +1,6 @@
 body{
     margin: 0;
     background-color: rgb(255, 254, 250);
-    font-family: 'Courier New', Courier, monospace
+    font-family: 'Courier New', Courier, monospace;
+    min-width: 100vh;
 }
