@@ -37,10 +37,10 @@ const QuestionAnswerPage = () => {
       </Link>
       <div className={styles.wrapper}>
         {answersToQuestion.map((question) => (
-          <div key={question._id}>
-            <h1>{question.questionText}</h1>
+          <div className={styles.answerBox} key={question._id}>
+            <h1 className={styles.questionH1}>{question.questionText}</h1>
             {question.question_answers.map((answer) => (
-              <h2 key={answer._id}>{answer.answerText}</h2>
+            <h2 key={answer._id} className={styles.answerH2}> - {answer.answerText}</h2>
             ))}
           </div>
         ))}

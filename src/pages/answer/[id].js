@@ -9,14 +9,14 @@ const Answer = () => {
 
   const [answerText, setAnswerText] = useState("");
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [questionAnswers, setQuestionAnswers] = useState([]);
 
   const postAnswer = async () => {
     try {
       const token = localStorage.getItem("jwt");
-      const questionId = router.query.id; // Get the question ID from router.query
 
       const response = await axios.post(
-        `http://localhost:8080/question/${questionId}/answers`,
+        `http://localhost:8080/question/${router.query.id}/answers`,
         {
           answerText: answerText,
         },
@@ -33,7 +33,16 @@ const Answer = () => {
         setShowSuccessMessage(false);
       }, 3000);
 
-      router.push(`/questionAnswer/${questionId}`); // Use the questionId variable
+      // Fetch the updated question with the new answer
+      const questionResponse = await axios.get(
+        `http://localhost:8080/question/${router.query.id}`
+      );
+      const data = questionResponse.data.response;
+
+      // Update the question_answers state with the updated question data
+      setQuestionAnswers(data[0].question_answers);
+
+      router.push(`/questionAnswer/${router.query.id}`);
     } catch (error) {
       console.error("Error posting an answer:", error);
     }

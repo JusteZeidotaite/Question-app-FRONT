@@ -7,3 +7,20 @@
     margin-left: 5%;
    
 }
+
+
+
+
+@media (max-width: 768px) {
+  .cardsWrapper {
+    
+  }
+}
+
+@media (max-width: 576px) {
+  .cardsWrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

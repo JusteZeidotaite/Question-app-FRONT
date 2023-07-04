@@ -48,3 +48,22 @@
 
 }
 
+.questionH1 {
+    margin:20px;
+
+}
+
+.answerBox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    
+}
+
+.answerBox h2 {
+
+    font-size: 20px;
+    color: rgb(36, 10, 60);
+}
