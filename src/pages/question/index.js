@@ -13,14 +13,14 @@ const AskQuestion = () => {
 
   const PostQuestion = async () => {
     try {
-      const token = localStorage.getItem("jwt"); // Get the JWT token from localStorage or your preferred storage mechanism
+      const token = localStorage.getItem("jwt"); 
 
       const response = await axios.post("http://localhost:8080/question", {
         creationDate: creationDate,
         questionText: question,
       }, {
         headers: {
-          Authorization: token, // Pass the JWT token in the authorization header
+          Authorization: token, 
         },
       });
 
@@ -33,7 +33,7 @@ const AskQuestion = () => {
       router.push("/");
     } catch (error) {
       console.error("Error posting question:", error);
-      // Handle the error, such as displaying an error message
+     
     }
   };
 

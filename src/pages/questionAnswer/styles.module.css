@@ -23,3 +23,28 @@
     margin-top:20px;
 }
 
+ .answerButton {
+    background-color: rgb(222, 21, 21);
+    border-radius: 50px;
+    height: 100px;
+    width: 100px;
+    border-color: coral;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(52, 46, 46);
+    margin-left: 70%;
+    cursor: pointer;
+    position: sticky;
+    text-decoration: none;
+}
+
+ .answerButton:hover{ 
+ background-color: coral;
+ height:120px;
+ width:120px;
+ border-radius: 60px;
+ color:rgb(52, 46, 46);
+ font-size: larger;
+ border-color: rgb(222, 21, 21);
+
+}
+
