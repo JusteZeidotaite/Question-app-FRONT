@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./styles.module.css";
 
 
-const AnswerCard = ({ id, answerText, onDelete }) => {
+const AnswerCard = ({ answerId, answerText, onDelete }) => {
   const handleDelete = () => {
-    onDelete(id);
+    onDelete(answerId);
   };
 
   return (
@@ -12,9 +12,9 @@ const AnswerCard = ({ id, answerText, onDelete }) => {
       
         <div className={styles.card}>
       
-          <h1 className={styles.answerText}>{answerText}</h1>
+          <h1 className={styles.answerText}>- {answerText}</h1>
         </div>
-     
+      <div className={styles.buttons}>
       <button className={styles.deleteButton} onClick={handleDelete}>
         DELETE ANSWER
       </button>
@@ -24,6 +24,7 @@ const AnswerCard = ({ id, answerText, onDelete }) => {
       <button className={styles.dislikeButton} onClick={handleDelete}>
         DISLIKE
       </button>
+      </div>
     </>
   );
 };

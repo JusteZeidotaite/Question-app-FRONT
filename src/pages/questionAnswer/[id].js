@@ -53,7 +53,7 @@ const QuestionAnswerPage = () => {
             <h1 className={styles.questionH1}>{question.questionText}</h1>
             {question.question_answers.map((answer) => (
             <AnswerCard     key={answer._id}
-                            id={answer.id}
+                            answerId={answer.id}
                             answerText={answer.answerText}
                             onDelete={handleDeleteAnswer}
             />

@@ -7,6 +7,8 @@ import styles from "./styles.module.css";
 
 const MainPage = ({ questions }) => {
   const [questionList, setQuestionList] = useState(questions);
+  const [showAnswered, setShowAnswered] = useState(true);
+  const [showUnanswered, setShowUnanswered] = useState(true);
 
   const handleDeleteQuestion = async (id) => {
     try {
@@ -24,11 +26,52 @@ const MainPage = ({ questions }) => {
     }
   };
 
+  const handleCheckboxChange = (event) => {
+    const { name, checked } = event.target;
+
+    if (name === "answered") {
+      setShowAnswered(checked);
+    } else if (name === "unanswered") {
+      setShowUnanswered(checked);
+    }
+  };
+
+  const filteredQuestions = questionList.filter((question) => {
+    if (showAnswered && showUnanswered) {
+      return true;
+    } else if (showAnswered && !showUnanswered) {
+      return question.answered;
+    } else if (!showAnswered && showUnanswered) {
+      return !question.answered;
+    }
+    return false;
+  });
+
   return (
     <div>
       <Navbar />
+      <div className={styles.filterWrapper}>
+        <label>
+          Show Answered
+          <input
+            type="checkbox"
+            name="answered"
+            checked={showAnswered}
+            onChange={handleCheckboxChange}
+          />
+        </label>
+        <label>
+          Show Unanswered
+          <input
+            type="checkbox"
+            name="unanswered"
+            checked={showUnanswered}
+            onChange={handleCheckboxChange}
+          />
+        </label>
+      </div>
       <div className={styles.cardsWrapper}>
-        {questionList.map((question) => (
+        {filteredQuestions.map((question) => (
           <div key={question._id}>
             <QuestionCard
               id={question.id}

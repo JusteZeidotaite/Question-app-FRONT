@@ -1,0 +1,21 @@
+.deleteButton, .likeButton, .dislikeButton {
+    width: 100px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: rgb(228, 214, 25);
+    color: rgb(53, 42, 42);
+    font-size: smaller;
+    cursor: pointer;
+}
+
+.buttons {
+    display:flex;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.answerText {
+
+    font-size: 24px;
+    margin-left: 20px;
+}

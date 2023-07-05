@@ -38,7 +38,7 @@ const AnswerQuestion = () => {
         setShowSuccessMessage(false);
       }, 3000);
 
-      // router.push(`/questionAnswer/${router.query.questionId}`);
+      router.push(`/questionAnswer/${router.query.id}`);
     } catch (error) {
       console.error("Error posting answer:", error);
     }
