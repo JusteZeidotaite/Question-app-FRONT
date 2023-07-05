@@ -1,6 +1,6 @@
 .navbar{
     height: 80px;
-    width: 100%;
+    max-width: 100%;
     background-color: rgb(228, 214, 25);
     margin-bottom: 100px;
     display: flex;
@@ -23,6 +23,7 @@
     text-decoration: none;
     cursor: pointer;
       color: rgb(72, 17, 17);
+      
 }
 
 .navbar ul li a:hover {
@@ -33,3 +34,30 @@
 .logo{
     height: 60px;
 }
+
+
+@media (max-width: 700px) {
+
+    .navbar ul {
+        margin-left:50px;
+   
+    }
+  .navbar ul li a {
+    font-size: smaller;
+    
+   
+    
+  }
+}
+@media (max-width: 578px) {
+
+    .navbar {
+        justify-content: flex-start;
+   
+    }
+
+    
+   
+    
+  }
+
